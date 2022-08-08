@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Paper Corner</title>
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    <!--== Google Fonts ==-->
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/app.min.css' %}">
+
+</head>
+
+<body class="preloader-active">
+    <!--== Start Preloader Content ==-->
+    <!-- <div class="preloader-wrap">
+        <div class="preloader"><span class="dot"></span>
+            <div class="dots"><span></span> <span></span> <span></span></div>
+        </div>
+    </div> -->
+    <!--== End Preloader Content ==-->
+
+    <!--== Start Header Wrapper ==-->
+    {% include 'web/partials/header.html' %}
+    <!--== End Header Wrapper ==-->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--== Start Footer Area Wrapper ==-->
+    {% include 'web/partials/footer.html' %}
+    <!--== End Footer Area Wrapper ==-->
+
+    <!--=======================Javascript============================-->
+    <script src="{% static 'js/app.min.js' %}"></script>
+</body>
+
+</html>
